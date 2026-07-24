@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/badge.PNG">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Ta-alim School</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="tahfidh.html">Tahfdh</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PHOTO GALLERY -->
+<section class="gallery-section">
+    <h2>School Photo Gallery</h2>
+
+    <div class="gallery-container">
+        <img src="images/football.jpg" alt="school activity">
+        <img src="images/tour 1 nr.jpg" alt="school activity">  
+        <img src="images/green tour 1.jpg" alt="school activity">
+        <img src="images/green tour 2.jpg" alt="school activity">   
+        <img src="images/tour 2 nr.jpg" alt="school activity"> 
+        <img src="images/green tour 3.jpg" alt="school activity">
+    </div>
+</section>
+
+<!-- VIDEO SLIDER -->
+<section class="video-gallery">
+
+    <h2>School Video Gallery</h2>
+
+    <div class="slider-wrapper">
+
+        <!-- LEFT BUTTON -->
+        <button class="slider-btn left" onclick="scrollVideos(-1)">&#10094;</button>
+
+        <!-- VIDEO CONTAINER -->
+        <div class="video-container" id="videoSlider">
+
+            <video controls>
+                <source src="videos/video 1.mp4" type="video/mp4">
+            </video>
+
+            <video controls>
+                <source src="videos/video 2.mp4" type="video/mp4">
+            </video>
+
+            <video controls>
+                <source src="videos/video 3.mp4" type="video/mp4">
+            </video>
+
+            <video controls>
+                <source src="videos/video 4.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <!-- RIGHT BUTTON -->
+        <button class="slider-btn right" onclick="scrollVideos(1)">&#10095;</button>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>Ta-alim primary school and Quran memorization center  -  A dream school for all parents </p>
+    <p>&copy; 2026 Ta-alim Primary School | All Rights Reserved</p>
+</footer>
+
+<!-- JAVASCRIPT-->
+<script>
+function scrollVideos(direction) {
+    const container = document.getElementById("videoSlider");
+    const scrollAmount = 320;
+
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
